@@ -102,16 +102,16 @@ def save_as_scorm_word(content, output_folder="scorm_package", scorm_zip_name="s
 
     html_path = os.path.join(output_folder, "index.html")
     with open(html_path, "w") as html_file:
-    html_file.write("""
-    <!DOCTYPE html>
-    <html>
-    <head><title>PDF Analysis</title></head>
-    <body>
-    <h1>PDF Analysis Response</h1>
-    <p>{}</p>
-    </body>
-    </html>
-    """.format(content.replace('\n', '<br>')))
+     html_file.write("""
+     <!DOCTYPE html>
+     <html>
+     <head><title>PDF Analysis</title></head>
+     <body>
+     <h1>PDF Analysis Response</h1>
+     <p>{}</p>
+     </body>
+     </html>
+     """.format(content.replace('\n', '<br>')))
 
 
     manifest_path = os.path.join(output_folder, "imsmanifest.xml")
