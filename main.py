@@ -111,7 +111,8 @@ def save_as_scorm_word(content, output_folder="scorm_package", scorm_zip_name="s
         <p>{content.replace('\n', '<br>')}</p>
         </body>
         </html>
-        """.format(content.replace('\n', '<br>')))
+        """.format(content.replace('\\n', '<br>')))
+
 
     manifest_path = os.path.join(output_folder, "imsmanifest.xml")
     with open(manifest_path, "w") as manifest_file:
